@@ -11,15 +11,15 @@
 ​		至于分类问题，说白了就是给定一个特征向量，我们通过一个函数的映射，将它映射到一个特定的类别。举个简单的例子，就是现在有一台色选机，用来挑选不同颜色的袜子。那么这个袜子，每一个袜子就是一个特征向量。而这个色选机，就是我们所谓的函数映射，在通过这个色选机后，红色的袜子被放在一个框中，绿色的袜子被放在一个框中，等等。这就是一个简单的分类问题。我们用数学形式来表示一下：
 
 
+
 $$
-f(x)=\begin{cases} 
+class(f(x))=\begin{cases} 
 		0, & f(x)∈A \\ 
 		1, & f(x)∈B\\
 		., & f(x)∈... \\
 		., & f(x)∈... \\
         ., & f(x)∈... \\
-        n, & f(x)∈N
-		
+        n, & f(x)∈N		
 \end{cases}
 $$
 
@@ -59,10 +59,9 @@ $$
 ​		假设我们现在有了一个数据集D。（x<sub>i</sub>,y<sub>i</sub>）∈D，目前我们只考虑二分类的情况。所以我们要做的任务就是在这个数据集描绘的平面上，找到一个线，面或者超平面，将这个数据集一分为二。
 
 $$
-class<f(x)>=\begin{cases} 
-		1, & W^TX+b>0 \\ 
-		0, & W^TX+b<0\\
-		
+class(f(x))=\begin{cases} 
+		=1, & W^TX+b>0 \\ 
+		=0, & W^TX+b<0\\		
 \end{cases}
 $$
 
@@ -71,8 +70,7 @@ $$
 $$
 class<f(x)>=\begin{cases} 
 		1, & W^TX+b>0 \\ 
-		-1, & W^TX+b<0\\
-		
+		-1, & W^TX+b<0\\		
 \end{cases}
 $$
 
@@ -661,8 +659,7 @@ $$
 $$
 class<W^TX+b>=\begin{cases} 
 		1, & W^TX+b>0 \\ 
-		-1, & W^TX+b<0\\
-		
+		-1, & W^TX+b<0\\	
 \end{cases}
 $$
 
@@ -747,8 +744,7 @@ $$
 $$
 f(X)=\begin{cases} 
 		1, & \sum \limits _{i = 1}^n\mu_iy_iK(X_i,X)+\frac{1}{y_i}-\sum \limits _{j = 1}^m\mu_jy_jK(X_j,X)>0 \\ 
-		-1, & \sum \limits _{i = 1}^n\mu_iy_iK(X_i,X)+\frac{1}{y_i}-\sum \limits _{j = 1}^m\mu_jy_jK(X_j,X)<0\\
-		
+		-1, & \sum \limits _{i = 1}^n\mu_iy_iK(X_i,X)+\frac{1}{y_i}-\sum \limits _{j = 1}^m\mu_jy_jK(X_j,X)<0\\		
 \end{cases}
 $$
 
